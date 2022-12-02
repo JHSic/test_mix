@@ -13,13 +13,13 @@ services:
 
   server:
     build:
-      context: ./backend/
+      context: ./Back-End/
     container_name: server
     restart: "on-failure"
     expose:
       - 8080
     volumes:
-      - './backend:/app'
+      - './back-End:/app'
       - '/app/node_modules'
     environment:
       - NODE_ENV=development
